@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   def create
     begin
-      User.create(name: params[:name], email: params[:email])
+      @user = User.create(name: params[:name], email: params[:email])
+      UserMailer.welcome_email(@user).deliver_later
 
       status = 201 #Created
     rescue
