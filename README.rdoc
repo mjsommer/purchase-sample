@@ -21,7 +21,8 @@ Install the Rails app
 
 Sample queries:
 
-POST
+POST:
+
 Create user (and send subsequent "welcome" email):
   curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d 'name=Martin Sommer&email=martin@sommer.net' "http://localhost:3000/users"
 
@@ -29,6 +30,7 @@ Create purchase:
   curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d 'user_id=1&purchased_at=Best Buy&status=completed' "http://localhost:3000/purchases"
 
 GET:
+
 (1) Find all completed Purchases and purchaser in last 7 days
   curl -X GET "http://localhost:3000/purchases/show"
 
