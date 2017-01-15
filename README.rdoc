@@ -38,6 +38,9 @@ GET:
 (3) Return only emails of Users found in task (2)
   curl -X GET "http://localhost:3000/purchases/show?limit=email"
 
+Testing:
+  rspec spec
+
 Notes:
 
 In this example:
